@@ -3,30 +3,7 @@ function isInArray(array, ...list) {
         return false;
     }
     let check = [];
-    let Set = {
-        list: [],
-        has: function (value) {
-            for (let item of this.list) {
-                if (value === item) {
-                    return true;
-                }
-            }
-            return false;
-        },
-        push: function (value) {
-            if (!this.has(value)) {
-                this.list.push(value);
-            }
-        },
-        init: function (array) {
-            if (typeof array !== 'object') {
-                return null;
-            }
-            for (item of array) {
-                this.push(item);
-            }
-        }
-    };
+    let Set = require("./Set.js");
 
     for (let iterator = 1; iterator < list.length; iterator++) {
         let argument = list[iterator];
