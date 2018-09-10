@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Widget</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="menu.js"> </script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #ff5252;
+        }
+        ul li span:hover
+        {
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 900;
+        }
+        .child
+        {
+            display: none;
+        }
+        .child.showed
+        {
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu-container">
+        <li>
+            <span>Животные</span>
+            <ul class="child">
+                <li>
+                    <span>Млекопитающие</span>
+                    <ul class="child">
+                        <li>Коровы</li>
+                        <li>Ослы</li>
+                        <li>Собаки</li>
+                        <li>Тигры</li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Другие</span>
+                    <ul class="child">
+                        <li>Змеи</li>
+                        <li>Птицы</li>
+                        <li>Ящерицы</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>Рыбы</span>
+            <ul class="child">
+                <li>Аквариумные</li>
+                <li>
+                    <span>Морские</span>
+                    <ul class="child">
+                        <li>Морская форель</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
